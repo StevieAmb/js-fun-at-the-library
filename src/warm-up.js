@@ -24,7 +24,7 @@ pages = 197 / 4;
 
 
 // Initialize a new variable "movie", but leave it undefined
-var movie;
+var movie = undefined;
 
 
 // Create a variable named "sequel", and assign it to a be a sequel of your
