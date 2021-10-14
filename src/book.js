@@ -11,11 +11,20 @@ var mainCharacter = {
   return mainCharacter;
 }
 
+function saveReview(msg, reviews) {
+if (!reviews.includes(msg)) {
+  reviews.push(msg);
+}
+return reviews;
+}
+
+//if the msgs are the same, don't add it
+
 module.exports = {
   createTitle,
   buildMainCharacter,
-  // saveReview,
-  // calculatePageCount,
+  saveReview,
+  calculatePageCount,
   // writeBook,
   // editBook
 }
