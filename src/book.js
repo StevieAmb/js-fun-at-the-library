@@ -21,7 +21,6 @@ return reviews;
 function calculatePageCount(title) {
   var wordcount = title.length;
   return wordcount * 20;
-
 }
 //if the msgs are the same, don't add it
 //.includes() is a method that checks is messages are
