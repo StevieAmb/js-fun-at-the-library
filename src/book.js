@@ -11,12 +11,20 @@ var mainCharacter = {
   return mainCharacter;
 }
 
-function saveReview(msg, reviews) {
+/*function saveReview(msg, reviews) {
 if (!reviews.includes(msg)) {
   reviews.push(msg);
 }
 return reviews;
-}
+}*/
+
+/*function saveReview(msg, reviews) {
+  for (var i = 0; i < reviews.length; i++) {
+    if (msg !== reviews[i]) {
+      reviews.push(msg);
+    }
+  }
+}*/
 
 //if the msgs are the same, don't add it
 //.includes() is a method that checks is messages are
