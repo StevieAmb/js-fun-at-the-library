@@ -15,8 +15,27 @@ shelfArray.splice(i,1);
  }
 }
 
+function listTitles(shelf) {
+var titles = ""
+for (var i = 0; i < shelf.length; i++) {
+if (shelf.length-1 === i) {
+titles = titles + shelf[i].title;
+} else {
+titles = titles + shelf[i].title + ", "
+}
+}
+return titles;
+}
 
-
+function searchShelf(shelf, name) {
+for (var i = 0; i < shelf.length; i++) {
+  if (shelf[i].title === name) {
+    return true;
+  }
+}
+return false;
+}
+//create list of all titles on a shelf
 
 
 //It is taking in a name, and an array. It needs to see if
@@ -30,6 +49,6 @@ shelfArray.splice(i,1);
 module.exports = {
   shelfBook,
   unshelfBook,
-  // listTitles,
-  // searchShelf
+  listTitles,
+  searchShelf
 };
