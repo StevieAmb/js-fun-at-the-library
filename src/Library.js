@@ -1,13 +1,13 @@
 function createLibrary (name) {
-   var library = {
-     name: name,
-     shelves: {
-       fantasy: [],
-       fiction: [],
-       nonFiction: []
-     }
-   }
-   return library;
+ var library = {
+  name: name,
+  shelves: {
+   fantasy: [],
+   fiction: [],
+   nonFiction: []
+  }
+ }
+ return library;
 }
 
 function addBook (library, name) {
@@ -15,12 +15,14 @@ function addBook (library, name) {
 }
 
 function checkoutBook (library, title, shelf) {
-for (var i = 0; i < library.shelves[shelf].length; i++) {
-if (library.shelves[shelf][i].title === title) {
-  library.shelves[shelf].splice(i, 1);
-  return `You have now checked out ${title} from the ${library.name}`;
-}
+ var specificShelf = library.shelves[shelf];
+ for (var i = 0; i < specificShelf.length; i++) {
+  if (specificShelf[i].title === title) {
+    specificShelf.splice(i, 1);
+    return `You have now checked out ${title} from the ${library.name}`;
+  }
 return `Sorry, there are currently no copies of ${title} available at the ${library.name}`
+ }
 }
 
 //if book IS on shelf return You have now checked out
